@@ -34,6 +34,12 @@ td:nth-child(1) { font-weight: bold; }
 .results .big { font-size: 20px; margin: 4px 0; }
 .results .big b { color:#ffb35c; }
 #breakdown { font-size: 13px; line-height: 1.5; }
+.tblwrap { overflow-x: auto; margin-bottom: 6px; }
+.tblwrap table { margin-bottom: 0; min-width: 640px; table-layout: fixed; }
+th.grp { text-align: center; color: #e8e8e8; }
+th.grp-oc { background: #3a2a14; color: #ffb35c; }
+.ic1 { border-left: 2px solid #555; }
+tr.sect td { background:#262d36 !important; color:#ffb35c; font-weight:bold; }
 #stamp { color:#9aa4ad; font-size: 13px; }
 #dropmsg { font-size: 13px; margin: 6px 0; }
 .hidden { display: none; }
@@ -80,40 +86,46 @@ td:nth-child(1) { font-weight: bold; }
 <div id="effects"></div>
 <div class="results">
   <h3 style="margin-top:0">Single shots — Body</h3>
-  <table style="margin-bottom:6px">
-  <thead><tr><th></th><th>Armored target</th><th>Health (no armor)</th><th>Armor plate (e.g. chunga plates)</th></tr></thead>
+  <div class="tblwrap"><table>
+  <colgroup><col style="width:22%"><col style="width:13%"><col style="width:13%"><col style="width:13%"><col style="width:13%"><col style="width:13%"><col style="width:13%"></colgroup>
+  <thead><tr><th></th><th colspan="3" class="grp grp-oc">Out of cover (DToC applied)</th><th colspan="3" class="grp ic1">In cover (no DToC)</th></tr>
+  <tr><th></th><th>Armored</th><th>Health (no armor)</th><th>Armor plate</th><th class="ic1">Armored</th><th>Health (no armor)</th><th>Armor plate</th></tr></thead>
   <tbody>
-  <tr><td>Body shot (no crit)</td><td id="s-body-nc-armor">—</td><td id="s-body-nc-health">—</td><td id="s-body-nc-plate">—</td></tr>
-  <tr><td>Body shot (crit)</td><td id="s-body-c-armor">—</td><td id="s-body-c-health">—</td><td id="s-body-c-plate">—</td></tr>
-  </tbody></table>
+  <tr><td>Body shot (no crit)</td><td id="s-body-nc-armor">—</td><td id="s-body-nc-health">—</td><td id="s-body-nc-plate">—</td><td class="ic1" id="s-body-nc-armor-ic">—</td><td id="s-body-nc-health-ic">—</td><td id="s-body-nc-plate-ic">—</td></tr>
+  <tr><td>Body shot (crit)</td><td id="s-body-c-armor">—</td><td id="s-body-c-health">—</td><td id="s-body-c-plate">—</td><td class="ic1" id="s-body-c-armor-ic">—</td><td id="s-body-c-health-ic">—</td><td id="s-body-c-plate-ic">—</td></tr>
+  </tbody></table></div>
   <h3>Single shots — Head</h3>
-  <table style="margin-bottom:6px">
-  <thead><tr><th></th><th>Armored target</th><th>Health (no armor)</th><th>Armor plate (e.g. chunga plates)</th></tr></thead>
+  <div class="tblwrap"><table>
+  <colgroup><col style="width:22%"><col style="width:13%"><col style="width:13%"><col style="width:13%"><col style="width:13%"><col style="width:13%"><col style="width:13%"></colgroup>
+  <thead><tr><th></th><th colspan="3" class="grp grp-oc">Out of cover (DToC applied)</th><th colspan="3" class="grp ic1">In cover (no DToC)</th></tr>
+  <tr><th></th><th>Armored</th><th>Health (no armor)</th><th>Armor plate</th><th class="ic1">Armored</th><th>Health (no armor)</th><th>Armor plate</th></tr></thead>
   <tbody>
-  <tr><td>Head shot (no crit)</td><td id="s-head-nc-armor">—</td><td id="s-head-nc-health">—</td><td id="s-head-nc-plate">—</td></tr>
-  <tr><td>Head shot (crit)</td><td id="s-head-c-armor">—</td><td id="s-head-c-health">—</td><td id="s-head-c-plate">—</td></tr>
-  </tbody></table>
+  <tr><td>Head shot (no crit)</td><td id="s-head-nc-armor">—</td><td id="s-head-nc-health">—</td><td id="s-head-nc-plate">—</td><td class="ic1" id="s-head-nc-armor-ic">—</td><td id="s-head-nc-health-ic">—</td><td id="s-head-nc-plate-ic">—</td></tr>
+  <tr><td>Head shot (crit)</td><td id="s-head-c-armor">—</td><td id="s-head-c-health">—</td><td id="s-head-c-plate">—</td><td class="ic1" id="s-head-c-armor-ic">—</td><td id="s-head-c-health-ic">—</td><td id="s-head-c-plate-ic">—</td></tr>
+  </tbody></table></div>
   <h3>Full DPS (expected — crit-averaged)</h3>
-  <table style="margin-bottom:6px">
-  <thead><tr><th></th><th>Armored target</th><th>Health (no armor)</th><th>Armor plate (e.g. chunga plates)</th></tr></thead>
+  <div class="tblwrap"><table>
+  <colgroup><col style="width:22%"><col style="width:13%"><col style="width:13%"><col style="width:13%"><col style="width:13%"><col style="width:13%"><col style="width:13%"></colgroup>
+  <thead><tr><th></th><th colspan="3" class="grp grp-oc">Out of cover (DToC applied)</th><th colspan="3" class="grp ic1">In cover (no DToC)</th></tr>
+  <tr><th></th><th>Armored</th><th>Health (no armor)</th><th>Armor plate</th><th class="ic1">Armored</th><th>Health (no armor)</th><th>Armor plate</th></tr></thead>
   <tbody>
-  <tr><td colspan="4" style="background:#262d36; color:#ffb35c; font-weight:bold">Body (no headshots)</td></tr>
-  <tr><td>Damage per shot (expected)</td><td id="d-body-shot-armor">—</td><td id="d-body-shot-health">—</td><td id="d-body-shot-plate">—</td></tr>
-  <tr><td>Burst DPS</td><td id="d-body-burst-armor">—</td><td id="d-body-burst-health">—</td><td id="d-body-burst-plate">—</td></tr>
-  <tr><td>Sustained DPS</td><td id="d-body-sust-armor">—</td><td id="d-body-sust-health">—</td><td id="d-body-sust-plate">—</td></tr>
-  <tr><td>Damage per magazine</td><td id="d-body-mag-armor">—</td><td id="d-body-mag-health">—</td><td id="d-body-mag-plate">—</td></tr>
-  <tr><td colspan="4" style="background:#262d36; color:#ffb35c; font-weight:bold">Head (every shot to the head)</td></tr>
-  <tr><td>Damage per shot (expected)</td><td id="d-head-shot-armor">—</td><td id="d-head-shot-health">—</td><td id="d-head-shot-plate">—</td></tr>
-  <tr><td>Burst DPS</td><td id="d-head-burst-armor">—</td><td id="d-head-burst-health">—</td><td id="d-head-burst-plate">—</td></tr>
-  <tr><td>Sustained DPS</td><td id="d-head-sust-armor">—</td><td id="d-head-sust-health">—</td><td id="d-head-sust-plate">—</td></tr>
-  <tr><td>Damage per magazine</td><td id="d-head-mag-armor">—</td><td id="d-head-mag-health">—</td><td id="d-head-mag-plate">—</td></tr>
-  <tr><td colspan="4" style="background:#262d36; color:#ffb35c; font-weight:bold">Mixed (at your headshot rate)</td></tr>
-  <tr><td>Damage per shot (expected)</td><td id="d-mix-shot-armor">—</td><td id="d-mix-shot-health">—</td><td id="d-mix-shot-plate">—</td></tr>
-  <tr><td>Burst DPS</td><td id="d-mix-burst-armor">—</td><td id="d-mix-burst-health">—</td><td id="d-mix-burst-plate">—</td></tr>
-  <tr><td>Sustained DPS</td><td id="d-mix-sust-armor">—</td><td id="d-mix-sust-health">—</td><td id="d-mix-sust-plate">—</td></tr>
-  <tr><td>Damage per magazine</td><td id="d-mix-mag-armor">—</td><td id="d-mix-mag-health">—</td><td id="d-mix-mag-plate">—</td></tr>
-  </tbody></table>
-  <p class="note" style="margin:2px 0">Armored applies your Damage to Armor; Health applies Damage to Health; Armor plate applies neither (plates are neither the armor bar nor health). The single-shot rows are the numbers to compare against the shooting range.</p>
+  <tr class="sect"><td colspan="7">Body (no headshots)</td></tr>
+  <tr><td>Damage per shot (expected)</td><td id="d-body-shot-armor">—</td><td id="d-body-shot-health">—</td><td id="d-body-shot-plate">—</td><td class="ic1" id="d-body-shot-armor-ic">—</td><td id="d-body-shot-health-ic">—</td><td id="d-body-shot-plate-ic">—</td></tr>
+  <tr><td>Burst DPS</td><td id="d-body-burst-armor">—</td><td id="d-body-burst-health">—</td><td id="d-body-burst-plate">—</td><td class="ic1" id="d-body-burst-armor-ic">—</td><td id="d-body-burst-health-ic">—</td><td id="d-body-burst-plate-ic">—</td></tr>
+  <tr><td>Sustained DPS</td><td id="d-body-sust-armor">—</td><td id="d-body-sust-health">—</td><td id="d-body-sust-plate">—</td><td class="ic1" id="d-body-sust-armor-ic">—</td><td id="d-body-sust-health-ic">—</td><td id="d-body-sust-plate-ic">—</td></tr>
+  <tr><td>Damage per magazine</td><td id="d-body-mag-armor">—</td><td id="d-body-mag-health">—</td><td id="d-body-mag-plate">—</td><td class="ic1" id="d-body-mag-armor-ic">—</td><td id="d-body-mag-health-ic">—</td><td id="d-body-mag-plate-ic">—</td></tr>
+  <tr class="sect"><td colspan="7">Head (every shot to the head)</td></tr>
+  <tr><td>Damage per shot (expected)</td><td id="d-head-shot-armor">—</td><td id="d-head-shot-health">—</td><td id="d-head-shot-plate">—</td><td class="ic1" id="d-head-shot-armor-ic">—</td><td id="d-head-shot-health-ic">—</td><td id="d-head-shot-plate-ic">—</td></tr>
+  <tr><td>Burst DPS</td><td id="d-head-burst-armor">—</td><td id="d-head-burst-health">—</td><td id="d-head-burst-plate">—</td><td class="ic1" id="d-head-burst-armor-ic">—</td><td id="d-head-burst-health-ic">—</td><td id="d-head-burst-plate-ic">—</td></tr>
+  <tr><td>Sustained DPS</td><td id="d-head-sust-armor">—</td><td id="d-head-sust-health">—</td><td id="d-head-sust-plate">—</td><td class="ic1" id="d-head-sust-armor-ic">—</td><td id="d-head-sust-health-ic">—</td><td id="d-head-sust-plate-ic">—</td></tr>
+  <tr><td>Damage per magazine</td><td id="d-head-mag-armor">—</td><td id="d-head-mag-health">—</td><td id="d-head-mag-plate">—</td><td class="ic1" id="d-head-mag-armor-ic">—</td><td id="d-head-mag-health-ic">—</td><td id="d-head-mag-plate-ic">—</td></tr>
+  <tr class="sect"><td colspan="7">Mixed (at your headshot rate)</td></tr>
+  <tr><td>Damage per shot (expected)</td><td id="d-mix-shot-armor">—</td><td id="d-mix-shot-health">—</td><td id="d-mix-shot-plate">—</td><td class="ic1" id="d-mix-shot-armor-ic">—</td><td id="d-mix-shot-health-ic">—</td><td id="d-mix-shot-plate-ic">—</td></tr>
+  <tr><td>Burst DPS</td><td id="d-mix-burst-armor">—</td><td id="d-mix-burst-health">—</td><td id="d-mix-burst-plate">—</td><td class="ic1" id="d-mix-burst-armor-ic">—</td><td id="d-mix-burst-health-ic">—</td><td id="d-mix-burst-plate-ic">—</td></tr>
+  <tr><td>Sustained DPS</td><td id="d-mix-sust-armor">—</td><td id="d-mix-sust-health">—</td><td id="d-mix-sust-plate">—</td><td class="ic1" id="d-mix-sust-armor-ic">—</td><td id="d-mix-sust-health-ic">—</td><td id="d-mix-sust-plate-ic">—</td></tr>
+  <tr><td>Damage per magazine</td><td id="d-mix-mag-armor">—</td><td id="d-mix-mag-health">—</td><td id="d-mix-mag-plate">—</td><td class="ic1" id="d-mix-mag-armor-ic">—</td><td id="d-mix-mag-health-ic">—</td><td id="d-mix-mag-plate-ic">—</td></tr>
+  </tbody></table></div>
+  <p class="note" style="margin:2px 0">Out of cover applies your Damage to Targets Out of Cover; In cover leaves it out (an enemy hit while still in cover). Armored applies your Damage to Armor; Health applies Damage to Health; Armor plate applies neither (plates are neither the armor bar nor health). The single-shot rows are the numbers to compare against the shooting range — the range dummy counts as out of cover.</p>
   <h3>How that number was built</h3>
   <div id="breakdown" class="note">Enter your stats to see the breakdown.</div>
 </div>
@@ -7440,15 +7452,16 @@ function computeDPS(inp, effs) {
   var critExp = (chc / 100) * (chd / 100);            /* expected crit bonus, body */
   var dttocF = 1 + (inp.dttoc + dttocB) / 100;
   var ampF = 1; amp.forEach(function(a){ ampF *= a.f; });
-  var common = inp.wd * (1 + twd / 100) * (1 + gsm / 100) * dttocF * ampF;
+  var common = inp.wd * (1 + twd / 100) * (1 + gsm / 100) * dttocF * ampF;   /* target out of cover */
+  var commonIn = inp.wd * (1 + twd / 100) * (1 + gsm / 100) * ampF;          /* target in cover: no DTTOC */
   var cycTime = inp.rpm > 0 ? (inp.mag * 60 / inp.rpm) + inp.reload : 0;
   function dpsSet(perShot) {
     var perMag = perShot * inp.mag;
     return { perShot: perShot, burst: perShot * inp.rpm / 60,
              sustained: cycTime > 0 ? perMag / cycTime : 0, perMag: perMag };
   }
-  function target(dtxPct) {
-    var B = common * (1 + dtxPct / 100);              /* plain body shot, no crit */
+  function target(dtxPct, base) {
+    var B = base * (1 + dtxPct / 100);                /* plain body shot, no crit */
     return {
       bodyShot: B,
       bodyCrit: B * (1 + chd / 100),
@@ -7462,7 +7475,8 @@ function computeDPS(inp, effs) {
       dtxF: 1 + dtxPct / 100
     };
   }
-  return { targets: { armor: target(inp.dta + dtaB), health: target(inp.dth + dthB), plate: target(0) },
+  return { targets: { armor: target(inp.dta + dtaB, common), health: target(inp.dth + dthB, common), plate: target(0, common) },
+           targetsInCover: { armor: target(inp.dta + dtaB, commonIn), health: target(inp.dth + dthB, commonIn), plate: target(0, commonIn) },
            factors: { twd: 1 + twd / 100, gsm: 1 + gsm / 100, dttoc: dttocF, amp: ampF,
                       critExp: 1 + critExp, headExp: 1 + hsd / 100 + critExp },
            totals: { chc: chc, chd: chd, hsd: hsd },
@@ -7480,18 +7494,22 @@ function recalc() {
     if (el) el.textContent = effectContribution(e);
   });
   document.getElementById('capnote').textContent = r.chcCapped ? 'Crit Chance totals over 60% — the game caps it at 60%, so 60% is what the math uses.' : '';
-  ['armor','health','plate'].forEach(function(k) {
-    var t = r.targets[k];
-    document.getElementById('s-body-nc-' + k).textContent = fmtInt(t.bodyShot);
-    document.getElementById('s-body-c-' + k).textContent = fmtInt(t.bodyCrit);
-    document.getElementById('s-head-nc-' + k).textContent = fmtInt(t.headShot);
-    document.getElementById('s-head-c-' + k).textContent = fmtInt(t.headCrit);
-    ['body','head','mix'].forEach(function(g) {
-      var d = t.dps[g === 'mix' ? 'mixed' : g];
-      document.getElementById('d-' + g + '-shot-' + k).textContent = fmtInt(d.perShot);
-      document.getElementById('d-' + g + '-burst-' + k).textContent = fmtInt(d.burst);
-      document.getElementById('d-' + g + '-sust-' + k).textContent = fmtInt(d.sustained);
-      document.getElementById('d-' + g + '-mag-' + k).textContent = fmtInt(d.perMag);
+  /* '' = out of cover (the original cell ids, used by the range regression); '-ic' = in cover */
+  [['', r.targets], ['-ic', r.targetsInCover]].forEach(function(pair) {
+    var sfx = pair[0], set = pair[1];
+    ['armor','health','plate'].forEach(function(k) {
+      var t = set[k], id = function(p) { return document.getElementById(p + k + sfx); };
+      id('s-body-nc-').textContent = fmtInt(t.bodyShot);
+      id('s-body-c-').textContent = fmtInt(t.bodyCrit);
+      id('s-head-nc-').textContent = fmtInt(t.headShot);
+      id('s-head-c-').textContent = fmtInt(t.headCrit);
+      ['body','head','mix'].forEach(function(g) {
+        var d = t.dps[g === 'mix' ? 'mixed' : g];
+        id('d-' + g + '-shot-').textContent = fmtInt(d.perShot);
+        id('d-' + g + '-burst-').textContent = fmtInt(d.burst);
+        id('d-' + g + '-sust-').textContent = fmtInt(d.sustained);
+        id('d-' + g + '-mag-').textContent = fmtInt(d.perMag);
+      });
     });
   });
   var f = r.factors, tt = r.totals;
@@ -7501,7 +7519,7 @@ function recalc() {
     '<br>× Out of cover ×' + fmt(f.dttoc) +
     '<br>× Amplified (combined) ×' + fmt(f.amp) +
     '<br>× Damage to Armor ×' + fmt(r.targets.armor.dtxF) + ' (armored column) / Damage to Health ×' + fmt(r.targets.health.dtxF) + ' (health column) / neither (armor plate column)' +
-    '<br>— that gives the single body shot (no crit). From there:' +
+    '<br>— that gives the single body shot (no crit) for the Out of cover columns. The In cover columns are the same without the ×' + fmt(f.dttoc) + ' out-of-cover factor. From there:' +
     '<br>Body crit = ×' + fmt(1 + tt.chd / 100) + ' (1 + Crit Damage ' + fmt(tt.chd) + '%)' +
     '<br>Head shot = ×' + fmt(1 + tt.hsd / 100) + ' (1 + Headshot Damage ' + fmt(tt.hsd) + '%)' +
     '<br>Crit headshot = ×' + fmt(1 + tt.hsd / 100 + tt.chd / 100) + ' — crit and headshot ADD in one bracket: 1 + HSD + CHD (range-confirmed)' +
